@@ -1,0 +1,27 @@
+<div class="flex overflow-x-scroll py-2 align-middle sm:px-6 lg:px-8" *ngIf="data !== null || data !== undefined">
+  <table class="min-w-full divide-y divide-gray-300">
+    <thead>
+      <tr>
+        <th *ngFor="let col of columns" scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">{{ col.header }}</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr *ngFor="let d of data; let i = index" (click)="onRowSelect(d, i)" (dblclick)="handleDoubleClick(d)" [class.bg-gray-100]="i === selectedNdx">
+        <td *ngFor="let col of columns" class=" px-3 py-4 text-sm text-gray-500">
+          {{ getDataField(d, col) }}
+        </td>
+        <td *ngIf="editBtn" class="px-3 py-4 text-sm text-gray-500">
+          <button (click)="editEvent(d)" class="text-violet-700 border rounded-lg border-violet-700 py-1 px-3 font-bold transition-all hover:bg-violet-800 hover:text-white hover:transition-all">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+    <div *ngIf="data === null || data === undefined || data.length === 0">
+      <tr>
+        <td>
+          <h3 class="font-bold">No Results Found.</h3>
+        </td>
+      </tr>
+    </div>
+  </table>
+</div>
+

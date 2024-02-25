@@ -1,1 +1,8 @@
-<p>admin-menu works!</p>
+<app-readonly-table
+  [columns]="cols"
+  [data]="menuItems!"
+  [editBtn]="true"
+  (onEdit)="handleEdit($event)"
+  (rowSelect)="handleSelect($event)"
+  (rowDblClick)="handleEdit($event)"
+></app-readonly-table>
