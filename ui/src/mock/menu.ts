@@ -38,6 +38,7 @@ export const mockMenuItems: MenuItem[] = [
     id: 2,
     name: "Crispy Chicken Sandwich",
     price: 8.99,
+
     description: "Crispy fried chicken breast topped with lettuce, tomato, and mayonnaise, served on a brioche bun.",
     avaliable: true,
     businessId: 1,
@@ -114,5 +115,14 @@ export const mockMenuItems: MenuItem[] = [
     avaliable: true,
     businessId: 1,
     images: ["https://example.com/images/mushroom-swiss-burger.jpg"]
-  }
+  },
+  {
+    id: 11,
+    name: "Mushroom Swiss Burger",
+    price: 10.99,
+    description: "Beef patty topped with sautéed mushrooms, Swiss cheese, lettuce, and mayonnaise.",
+    avaliable: true,
+    businessId: 2,
+    images: ["https://example.com/images/mushroom-swiss-burger.jpg"]
+  },
 ]
